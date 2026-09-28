@@ -7,3 +7,15 @@ export interface Movie{
     vote_average:number;
     release_data:string;
 }
+export interface MovieResponse{
+    results:Movie[]
+}
+
+ export interface Genre{
+    id:number,
+    name:string
+}
+
+export interface GenreResponse{
+    genres:Genre[]
+}

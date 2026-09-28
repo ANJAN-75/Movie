@@ -1,4 +1,6 @@
 import axios from "axios";
+import type { GenreResponse,Genre,Movie,MovieResponse } from "../types/movie"; 
+
 
 const tmdb = axios.create({
   baseURL: "https://api.themoviedb.org/3",
@@ -8,7 +10,13 @@ const tmdb = axios.create({
   },
 });
 
-export const getPopularMovies = async () => {
-  const response = await tmdb.get("/movie/popular");
-  return response.data;
+export const getPopularMovies = async ():Promise<Movie[]> => {
+  const response = await tmdb.get<MovieResponse>("/movie/popular")
+  return response.data.results
 };
+
+export const getAllGenreMovie=async()=>{
+  const response=await tmdb.get("/genre/movie/list")
+  return response.data.genres
+}
+

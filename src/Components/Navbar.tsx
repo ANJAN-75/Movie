@@ -6,8 +6,8 @@ const Navbar = () => {
         <h2 className="text-2xl font-bold tracking-widest " >CI<span className="text-red-500   ">N</span>EA</h2>
       </div>
       <div className="middle flex gap-3.5 ">
-        <a href="#" className="text-gray-200 " >Home</a>
-        <a href="#" className="text-gray-200 ">Browser&Genre</a>
+        <a href="/" className="text-gray-200 " >Home</a>
+        <a href="/moviedetails" className="text-gray-200 ">Browser&Genre</a>
         <a href="#" className="text-gray-200 ">WatchList</a>
       </div>
       <div className="right flex gap-2  ">
